@@ -1,0 +1,19 @@
+<div>
+  <div class="card" *ngFor="let item of items" >
+    <div class="card-header">
+      {{item.title}}
+    </div>
+    <div class="card-body">
+     <table class="table table-bordered">
+      <thead >
+          <th *ngFor="let columns of item.columnValues">{{columns}}</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let rows of item.rowValues">
+            <td *ngFor="let rowItem of rows">{{rowItem}}</td>
+        </tr>
+      </tbody>
+     </table>
+    </div>
+  </div>
+</div>
